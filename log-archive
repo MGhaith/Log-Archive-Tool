@@ -2,6 +2,15 @@
 
 # Log Archive Tool
 
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Check if directory argument is given
+if [ -z "$1" ]; then
+  echo "Usage: $0 <log-directory>"
+  exit 1
+fi
+
 LOG_DIR=$1
 ARCHIVE_DIR="$HOME/log_archives"
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
