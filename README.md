@@ -60,7 +60,7 @@ The tool:
 
 ## 🛠️ Future Enhancements
 
-- Configurable archive location
+- Cron job scheduling (cron or systemd timers)
 - Email/SMS notification.
 - Remote server upload (scp, rsync, or S3 upload)
 - Config file support
