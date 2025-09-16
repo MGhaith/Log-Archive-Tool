@@ -17,6 +17,12 @@ TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 ARCHIVE_NAME="logs_archive_${TIMESTAMP}.tar.gz"
 LOG_FILE="$ARCHIVE_DIR/archive.log"
 
+# Ensure log directory exists
+if [ ! -d "$LOG_DIR" ]; then
+  echo "Error: Directory $LOG_DIR does not exist."
+  exit 1
+fi
+
 # Create archive storage directory if not exists
 mkdir -p "$ARCHIVE_DIR"
 
